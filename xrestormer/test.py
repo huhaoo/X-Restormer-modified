@@ -1,3 +1,11 @@
+# compat_tv.py
+import sys, types
+from torchvision.transforms import functional as F
+
+m = types.ModuleType("torchvision.transforms.functional_tensor")
+m.rgb_to_grayscale = F.rgb_to_grayscale  # 按需再补别的函数
+sys.modules["torchvision.transforms.functional_tensor"] = m
+
 # flake8: noqa
 import os.path as osp
 
