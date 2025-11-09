@@ -195,10 +195,10 @@ class XRestormerModel(SRModel):
                                              f'{img_name}_{current_iter}.png')
                 else:
                     if self.opt['val']['suffix']:
-                        save_img_path = osp.join(self.opt['path']['visualization'], dataset_name,
+                        save_img_path = osp.join(self.opt['path']['results'], dataset_name,
                                                  f'{img_name}_{self.opt["val"]["suffix"]}.png')
                     else:
-                        save_img_path = osp.join(self.opt['path']['visualization'], dataset_name,
+                        save_img_path = osp.join(self.opt['path']['results'], dataset_name,
                                                  f'{img_name}.png')
                 imwrite(sr_img, save_img_path)
 
